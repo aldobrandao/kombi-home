@@ -9,6 +9,10 @@
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700&display=swap">
+<title>Kombi Home 2001</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700&display=swap">
 <style>
 /* Layout: foto sangrada no alto, ficha em coluna única no celular; no computador, galeria fixa à esquerda e ficha à direita */
 :root{
@@ -126,7 +130,7 @@ h2{font-size:22px;font-weight:700;letter-spacing:-.01em;margin-bottom:10px}
 .play{position:absolute;left:50%;top:50%;width:38px;height:38px;margin:-19px 0 0 -19px;border-radius:50%;background:rgba(255,255,255,.94);color:var(--ink);display:flex;align-items:center;justify-content:center}
 .vt{display:block;font-size:13px;font-weight:600;margin-top:5px;line-height:1.25}
 .lb-img video{max-width:100%;max-height:100%;background:#000}
-.sticky{position:fixed;left:0;right:0;bottom:0;z-index:40;background:rgba(239,243,242,.96);border-top:1px solid var(--line);padding:10px max(16px,env(safe-area-inset-right,0px)) max(10px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));transform:translateY(110%);visibility:hidden;transition:transform .2s ease,visibility .2s}
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:40;background:rgba(239,243,242,.96);border-top:1px solid var(--line);padding:10px max(16px,env(safe-area-inset-right,0px)) max(10px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));}
 .sticky.on{transform:none;visibility:visible}
 .sticky .btn{max-width:520px;margin:0 auto}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
@@ -169,7 +173,6 @@ h2{font-size:22px;font-weight:700;letter-spacing:-.01em;margin-bottom:10px}
 
 <section class="facts">
   <p class="why"><strong>Motivo da venda</strong>Nos mudamos e minha esposa está grávida. Não consigo terminar o motorhome agora.</p>
-  <a class="btn" href="https://wa.me/5511932205885?text=Ol%C3%A1%2C%20vi%20o%20an%C3%BAncio%20da%20Kombi%20Home%202001">Conversar no WhatsApp <span class="nw">– (11) 93220-5885</span></a>
 </section>
 
 <div class="body">
@@ -271,10 +274,6 @@ document.querySelectorAll('.vcard').forEach((c, i) => {
 $('vmClose').addEventListener('click', closeVm);
 $('vm').addEventListener('click', e => { if (e.target === $('vm') || e.target.classList.contains('lb-img')) closeVm(); });
 document.addEventListener('keydown', e => { if (!$('vm').hidden && e.key === 'Escape') closeVm(); });
-const topBtn = document.querySelector('.facts .btn');
-if ('IntersectionObserver' in window) {
-  new IntersectionObserver(es => es.forEach(e => $('sticky').classList.toggle('on', !e.isIntersecting))).observe(topBtn);
-} else { $('sticky').classList.add('on'); }
 go(0);
 </script>
 </html>
